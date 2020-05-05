@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+      
+<html>
+<head><title>AnonChat</title>
+    
+
+    <script>
+
+
+        function sendmessage(){
+          chat_id = "377122878";
+          token = "1182250294:AAEkMmG-mv4v-uFJW-3pdmtzJSoSz9_sfA4";
+            message = "Name : "+document.getElementById("name").value+"%0A"+"Message:"+document.getElementById("message").value+"%0A";
+            $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id);
+            alert("Form Submitted"); 
+        
+            }
+            
+      </script>
+
+<style>
+body {
+  color: whitesmoke;
+  background-color: black;
+  text-align: center ;
+  height: 100%;
+  margin: 0;
+
+}
+input{
+  height: 50%;
+  width: fit-content;
+  width:auto 
+  border: 1px solid black;
+}
+de{
+    border-color: chartreuse;
+    color: #000;
+    background-color: coral ;
+}
+</style>
+</head>
+<body>
+
+<h1>AnonChat</h1>
+<br>
+<input type="text" name="name" id="name" placeholder="Nickname">
+<br>
+<textarea name="message" id="message"  placeholder="Your Message">
+</textarea>
+<br>
+
+<button type="submit" onclick=sendmessage() >submit</button>
+</body>
+</html>
